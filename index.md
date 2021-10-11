@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Elisabeth's Final Project in Data Vis
 
 You can use the [editor on GitHub](https://github.com/elishbeth/comp435Final/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
