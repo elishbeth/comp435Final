@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Looking Down the Barrel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' type='image/x-icon' href='/final/images/favicon.ico'/>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--d3-->
+    <script type="text/javascript" src="../d3/d3.min.js"></script>
+    <script type="text/javascript" src="../d3/d3.v3.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <!--Fullpage.js-->
+    <link rel="stylesheet" type="text/css" href="../fullpage-js/jquery.fullPage.css" />
+    <script type="text/javascript" src="../fullpage-js/fullpage.scrollHorizontally.min.js"></script>
+    <script type="text/javascript" src="../fullpage-js/jquery.fullpage.extensions.min.js"></script>
+    
+    <!--FontAwesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--TopoJson-->
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+
+    <!--Annotation Plugin-->
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+
+    <!--Legend Plugin-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="js/intro-blob.js"></script>
+    <script type="text/javascript" src="js/trends.js"></script>
+    <script type="text/javascript" src="js/sunburst-viz.js"></script>
+    <script type="text/javascript" src="js/timeline.js"></script>
+    <script type="text/javascript" src="js/car-terror.js"></script>
+    <script type="text/javascript" src="js/hdi.js"></script>
+    <script type="text/javascript" src="js/law-viz.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!--Main stylesheet-->
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+    <link type="text/css" href="css/intro-blob.css" rel="stylesheet">
+    <link type="text/css" href="css/trends.css" rel="stylesheet">
+    <link type="text/css" href="css/sunburst.css" rel="stylesheet">
+    <link type="text/css" href="css/timeline.css" rel="stylesheet">
+    <link type="text/css" href="css/hdi-car-terror.css" rel="stylesheet">
+    <link type="text/css" href="css/law-viz.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div id="fullpage">
+      <!--Section 1-->
+      <div class="section title-page bg-image" id="title-bg" data-anchor="section-title">
+        <div class="bg-opacity">
+          <div id="title-wrapper">
+              <h1 id="main-title">Looking Down the Barrel</h1>
+              <h4 id="main-subtitle">Exploring Gun Violence in America</h4>
+          </div>
+        </div>
+        <div class="center-page"><span></span>Scroll</div>
+      </div>
+
+      <!--Section 2-->
+      <div class="section mass-shootings" data-anchor="mass-shootings">
+
+        <div class="slide mass-shootings-intro-1 bg-image">
+          <div class="bg-opacity">
+            <div class="intro-para">
+              <h2 class="text-red">The Problem of Mass Shootings</h2>
+              <h5>
+                The recent years have brought about much gun violence in America with mass shootings frequently dominating the nation's headlines.
+                Mass shootings such as the Orlando Nightclub and Sandy Hook Elementary School shootings are closely associated with the issue of gun violence.
+              </h5>
+              <br>
+              <h5>
+                While there is no universal definition of a mass shooting, we use the definition "FOUR or more shot and/or killed in a single incident, at the same general time and location  not including the shooter"
+                which is similar to the FBI's definition of a mass killing, which does not specify a weapon type.
+              </h5>
+            </div>
+          </div>
+          <div class="center-page"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide mass-shootings-intro-2">
+          <div class="intro-para">
+            <h5>
+              Using data on mass shootings kindly provided to us by the <a target="_blank" href="http://www.gunviolencearchive.org/">Gun Violence Archive</a>, 
+              a not-for-profit corporation dedicated to providing accurate public access to gun-related violence in the United States, we present an overview of some of the numbers surrounding mass shootings from 2013 to 2016.
+            </h5>
+          </div>
+          <div class="center-page"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide mass-shootings-viz">
+          <div id="timeline-container" class="section-container">
+            
+            <div class="section-intro">
+              <h1>An Overview of Mass Shootings</h1>
+              <h5>The number of incidents of mass shootings have increased over the past 4 years from 2013 to 2016. </br>
+                  <span class="text-em text-red">Click on the filters below </span>to filter by the number of victims (Deaths + Injuries) or see Deaths and Injuries separately.
+              </h5>
+            </div>
+
+            <div id="timeline-wrapper" class="viz-wrapper">
+              <div id="timeline-group">
+
+                <div id="timeline-filter-buttons">
+                  <button type="button" id="totalRecords-button">Number of Incidents</button>
+                  <button type="button" id="victims-button">Total Victims</button>
+                  <button type="button" id="fatalities-button">Deaths</button>
+                  <button type="button" id="injuries-button">Injuries</button>
+                </div> 
+                
+                <div id="timeline2013-wrapper" class="timeline-canvas-wrapper">
+                  <div class="year-label"><h3>2013</h3></div>
+                  <div id="timeline2013-canvas" class="timeline-canvas"></div>
+                </div>
+
+                <div id="timeline2014-wrapper" class="timeline-canvas-wrapper">
+                  <div class="year-label"><h3>2014</h3></div>
+                  <div id="timeline2014-canvas" class="timeline-canvas"></div>
+                </div>
+                
+                <div id="timeline2015-wrapper" class="timeline-canvas-wrapper">
+                  <div class="year-label"><h3>2015</h3></div>
+                  <div id="timeline2015-canvas" class="timeline-canvas"></div>
+                </div>
+
+                <div id="timeline2016-wrapper" class="timeline-canvas-wrapper">
+                  <div class="year-label"><h3>2016</h3></div>
+                  <div id="timeline2016-canvas" class="timeline-canvas"></div>
+                </div>
+
+              </div>
+              
+
+              <div id="timeline-map">
+                <h6>Click on a month to see where these shootings occur</h6>
+              </div>
+
+            </div>
+          </div>
+          <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+      </div>
+
+      <!--Section 3-->
+      <div class="section overview-page" data-anchor="gun-deaths-overview">
+
+        <!--Segue-->
+        <div class="slide clarify">
+          <div class="intro-para">
+            <h2 class="text-red">...But there is more to it than just Mass Shootings</h2>
+            <h5>
+              Because of the sheer number of victims in a single incident, mass shootings have been heavily covered in the media.
+              However, the number of deaths by mass shootings only account for <span class="text-red text-em">a small fraction of the total gun deaths</span> in the United States.
+            </h5>
+          </div>
+          <div class="center-page"><span></span>Scroll</div>
+        </div>
+
+        <!-- BLOB Slide -->
+        <div class="slide blob">
+
+          <div class="blob-header">
+              <div id="canvas-wrapper">
+                  <div id="counter-header">
+                      In 2015, <span id="counter-label">0</span>Americans died from gun related injuries
+                  </div>
+                  <div id="circle-unit">
+                    <h5>Each</h5>
+                    <svg width="12" height="12"><circle r="6" cx="6" cy="6" fill="#808080"></circle></svg>
+                    <h5>represents 100 deaths</h5>
+                  </div>
+                  <div id="blob-canvas">
+                    <svg class="svg-blob-canvas"></svg>
+                  </div>
+                  <div id="blob-explanation">
+                    <h5>Out of the 36,252 deaths caused by gun-violence, <span style="color:#EF3B2C">334</span> of these deaths occured in a mass shooting.</h2>
+                  </div>
+              </div>
+            </div>
+            <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide car-terror">
+          <div id="car-terror-container" class="section-container">
+            <div id="car-terror-wrapper">
+              <div id="car-terror-para">
+                <h5>
+                  Over the past decade, from 2005 to 2015, the number of gun deaths has risen to become <span class="text-em text-red">fairly similar to the number of deaths caused by car accidents</span>.
+                  In contrast, the number of Americans killed in terrorist incidents pale in comparison. 
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide hdi">
+          <div id="hdi-container" class="section-container">
+            <div id="hdi-wrapper">
+              <div id="hdi-para">
+                <h5>
+                  Across other high-income countries, based on their Human Development Index score, the United States ranks the highest in number of gun deaths per 100,000 people.
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+      </div>
+
+      <!--Section 4-->
+      <div class="section trends" data-anchor="trends">
+        <div class="slide trends-intro bg-image">
+          <div class="bg-opacity">
+            <div class="intro-para">
+              <h2 class="text-red">Can we identify a trend in the numbers?</h2>
+              <h5>
+                We have seen that deaths due to gun violence has risen over the past decade from 2005 to 2015. 
+                In order to gain a better understanding of the issue, we now look at how these deaths are distributed based on various factors over the years.
+              </h5>
+            </div>
+          </div>
+          <div class="center-page"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide trends-viz">
+          <div id="trends-container" class="section-container">
+            
+            <div class="section-intro">
+              <h1>The Past Decade</h1>
+              <h5>Based on causes of death data from the <a target="_blank" href="https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm">Center for Disease Control and Prevention</a> 
+                  we present an interactive visualization for understanding how these deaths have been distributed over the years.
+                  <br><span class="text-em">Click a filter on the left to find out more.</span></br>
+              </h5>
+            </div>
+            <div id="trends-wrapper" class="viz-wrapper">
+            
+              <!-- Buttons -->
+              <div id="filter-buttons" class="viz-filter-buttons"> 
+                <button type="button" id="gender-button">Gender</button>
+                <button type="button" id="age-button">Age</button>
+                <button type="button" id="education-button">Education</button>
+                <button type="button" id="place-button">Place</button>
+                <button type="button" id="ethnicity-button">Ethnicity</button>
+                <button type="button" id="intent-button">Intent</button>
+                <button type="button" id="total-button">Total</button>
+              </div>
+
+              <!--Main Viz Wrap-->
+              <div id="stack-chart-content" class="viz-content">
+                  <svg class="stack-chart-svg"></svg>
+                  <div id="stack-legend">
+                      <div class="title">Legend</div>
+                      <div class="legend-items"></div>
+                  </div>
+              </div>
+
+              <!--Text-->
+              <div id="trends-insights-wrapper" class="insights-wrapper">
+                <h2 id="trends-insights-header" class="insights-header">Key Insights</h2>
+                <div id="trends-text" class="insights-text"></div>
+                <button type="button" id="trends-next" class="insights-next">Next</button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+
+      </div>
+
+      <!--Section 5-->
+      <div class="section sunburst" data-anchor="circumstances">
+         
+        <div id="sunburst-container" class="section-container">
+          <div class="section-intro">
+            <h1>Understanding the Circumstances</h1>
+            <h5>Breaking down the data further can give us a more nuanced understanding of who the victims are and where these crimes are perperated.
+                In this visualization, we break down the data for 2015 into 1 or 2 variables which can reveal deeper insights into the circumstances and factors surrounding these tragic events.
+                <br><span class="text-em">Select up to 2 filters to explore the data.</span>
+            </h5>
+          </div>
+
+          <div id="sunburst-wrapper" class="viz-wrapper">
+            <!-- Buttons -->
+            <div id="sunburst-filter-buttons" class="viz-filter-buttons"> 
+              <div id="suburst-filter-explain"><h6>Select up to two filters:</h6></div>
+              <button type="button" id="gender-sunburst-button">Gender</button>
+              <button type="button" id="age-sunburst-button">Age</button>
+              <button type="button" id="education-sunburst-button">Education</button>
+              <button type="button" id="location-sunburst-button">Place</button>
+              <button type="button" id="race-sunburst-button">Ethnicity</button>
+              <button type="button" id="intent-sunburst-button">Intent</button>
+              <button type="button" id="total-sunburst-button">Total</button>
+            </div>
+
+            <!--Main Viz Wrap-->
+            <div id="sunburst-chart-content" class="viz-content">
+              <div id="pie-sequence"></div>
+              <div class="sunburst-chart-svg">
+                <div id="ethnicity-note">Note: Ethnicity (selected as the first filter) has been normalized against population size of each respective ethnic group based on US Census Data</div>
+                <div id="education-note">Note: Each education attribute represents the highest education level a person has</div>
+              </div>
+            </div>
+
+            <!-- Insights -->
+            <div id="sunburst-insights-wrapper" class="insights-wrapper">
+              <h2 id="sunburst-insights-header" class="insights-header">Suggested Explorations</h2>
+              <div id="sunburst-text" class="insights-text">
+                <ul>
+                  <li>Select <span class="text-em">Age</span> > <span class="text-em">Place</span> then Select <span class="text-em">0-12</span>:
+                    <br>Most children aged 0-12 are killed by guns at home.</li>
+                  <li>Select <span class="text-em">Ethnicity</span> > <span class="text-em">Intent</span> then Select <span class="text-em">Black or White</span>:
+                    <br>Suicide accounts for the largest proportion of gun deaths among white people, while homicides make up the largest proportion of gun deaths for black people.</li>
+                  <li>Select <span class="text-em">Age</span> > <span class="text-em">Intent</span>:
+                    <br>Suicide accounts for the largest proportion of gun deaths among the 40+ age group, while homicides make up the largest proportion of gun deaths among those aged 20-29.</li>
+                  <li>Select <span class="text-em">Education</span> > <span class="text-em">Intent</span>:
+                    <br>Suicide accounts for the largest proportion of gun deaths among those holding some degrees, while homicides make up a larger proportion of gun deaths among those without one.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="scroll-down"><span></span>Scroll</div>
+      </div>
+
+      <!--Section 6-->
+      <div class="section laws" data-anchor="gun-laws">
+        <div class="slide laws-intro bg-image">
+          <div class="bg-opacity">
+            <div class="intro-para">
+              <h2 class="text-red">What is the state of firearm regulations in the United States?</h2>
+              <h5>
+                Laws exist to ensure general safety and to ensure that our rights as citizens are guarded against abuse by others. including ourselves.
+                Similarly, firearm laws exist to preserve both public and private safety in matters concerning the use of firearms. 
+              </h5>
+              <br>
+              <h5>
+                While there are federal laws in place to regulate firearm activity, state and local police are not legally obligated to enforce these laws.
+                Many states implement their own firearm laws and as a result of this, the laws in each state vary considerably. Next, we explore the types of gun laws
+                present at the state level.
+              </h5>
+            </div>
+          </div>
+          <div class="center-page"><span></span>Scroll</div>
+        </div>
+
+        <div class="slide laws-viz">
+          <div id="laws-container" class="section-container">
+            
+            <div class="section-intro">
+              <h1>An Overview of State Firearm Laws</h1>
+              <h5>Based on state firearm law data from the <a target="_blank" href="https://www.statefirearmlaws.org/">State Firearm Law Database</a> by Boston University,
+                  we present an interactive visualization showing 
+                  how drastically firearm laws vary across states, and what each law entails.
+                  <br><span class="text-em">Click on each state to find out more.</span></br>
+              </h5>
+            </div>
+            <div id="laws-wrapper" class="viz-wrapper">
+
+              <!--Map + Chart -->
+              <div id="map-chart-content">
+                <div id="law-map"></div>
+                <div id="year-slider"></div>
+                <div id="law-chart"></div>
+              </div>
+
+              <!--Text-->
+              <div id="law-insights-wrapper" class="insights-wrapper">
+                <div id="law-instr"><h3>Select a state and year to view its gun regulations</h3></div>
+                <div id="law-insights-container">
+                  
+                  <h2 id="law-insights-header" class="insights-header"></h2>
+                  
+                  <div id="law-definition">Click on a regulation to see its description</div>
+
+                  <div id="state-law">
+                    <div id="yes-law"><h3>Regulations In Place:</h3>
+                      <div id="yes-law-wrapper">
+                        <ul id="yes-law-list"></ul>
+                      </div>
+                    </div>
+
+                    <div id="no-law"><h3>Regulations Not In Place:</h3>
+                      <div id="no-law-wrapper">
+                        <ul id="no-law-list"></ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="scroll-down"><span></span>Scroll</div>
+        </div>
+
+      </div>
+
+      <!--Section 7-->
+      <div class="section conclusion" data-anchor="conclusion">
+        <div id="conclusion-container" class="section-container">
+          <div class="section-intro">
+            <h1>What Can You Do To Make This Better?</h1>
+            <h5>
+              We hope that this project has given you a glimpse of the state of gun violence in the United States.<br>
+              How many of these deaths could have been prevented? There are many ways you can make a difference.
+            </h5>
+          </div>
+
+          <div class="conclusion-wrapper">
+            <div id="find-rep">
+              <h3>Let your voice be heard. If you feel strongly about this issue, contact your representative.</h3>
+              <div id="input-wrapper">
+                <form>
+                  <input id="zipcode-entry" placeholder="Enter Your Zipcode"/>
+                  <input id="find-button" type="submit" value="Find My Representative"/>
+                </form>
+              </div>
+            </div>
+
+            <div id="pledge">
+              <h2>Practice Responsible Gun Ownership</h2></br>
+              <h3>Take the Resonsible Gun Ownership Pledge</h3>
+              <h3><a href="http://www.responsibleownership.org/" target="_blank">Gun Owners for Responsible Gun Ownership</a></h3></br><br>
+              <ul>
+              <li><h5>I will practice safe storage.  I will keep my firearms and ammunition locked and separate.</h5></li></br>
+              <li><h5>I will support universal background check requirements.  I will not sell or buy a firearm without a background check.</h5></li></br>
+              <li><h5>I will support the rights of my fellow citizens to be free from intimidation by the open display of firearms in public.  I will avoid the unnecessary carrying of firearms in public, particularly in places where children are present.</h5></li></br>
+              <li><h5>I will support the rights of my fellow citizens to be free from intimidation by the open display of firearms in public.  I will avoid the unnecessary carrying of firearms in public, particularly in places where children are present.</h5></li></br>
+              <li><h5>I will always make gun safety a priority in my home, in the field or on the range.</h5></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <div class="section sources" data-anchor="sources-credits">
+        <div id="sources-container" class="section-container">
+          <div id="proj-intro" class="section-intro">
+            <h1>About this Project</h1>
+            <h5>
+              This project was a final project for the University of Washington's Data Visualization course, CSE 442 by Professor Jeffrey Heer.
+            </h5>
+          </div>
+          <div id="sources-intro" class="section-intro">
+            <div id="source-col">
+              <h1>Sources</h1>
+              <ol>
+                <li><h5>2013-2016 Mass shooting data:</br><a href="http://www.gunviolencearchive.org/" target="_blank">Gun Violence Archive</a></h5></li>
+                <li><h5>1982-2017 Mother Jones' US Mass Shootings data:<br><a href="http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data" target="_blank">Mother Jones</a></h5></li>
+                <li><h5>2005-2015 US Deaths caused by gun related injuries:</br><a href="https://www.cdc.gov/nchs/data_access/VitalStatsOnline.htm#Mortality_Multiple" target="_blank">Centers for Disease Control and Prevention</a></h5></li>
+                <li><h5>2010 Gun Deaths per 100,000 by country:</br><a href="http://www.cbsnews.com/news/how-u-s-gun-deaths-compare-to-other-countries/" target="_blank">CBS News</a></h5></li>
+                <li><h5>2015 United States Census data:</br><a href="https://www.census.gov/quickfacts/table/PST045216/00" target="_blank">United States Census Bureau</a></h5></li>
+                <li><h5>2005-2015 US Deaths due to terrorism related activities:</br><a href="http://www.politifact.com/truth-o-meter/statements/2015/oct/05/viral-image/fact-checking-comparison-gun-deaths-and-terrorism-/" target="_blank">Politifact</a></h5></li>
+                <li><h5>2005-2015 US Deaths due to car accidents:</br><a href="http://www.iihs.org/iihs/topics/t/general-statistics/fatalityfacts/overview-of-fatality-facts" target="_blank">Insurance Institute for Highway Safety</a></h5></li>
+                <li><h5>1991-2017 State Firearm Laws</br><a href="https://www.statefirearmlaws.org/" target="_blank">State Firearm Law Database by Boston University - School of Public Health</a></h5></li>
+            </div>
+            <div id="spacer"></div>
+            <div id="thanks-col">
+              <h1>Special Thanks</h1>
+              <ul>
+                <li><h5><a href="https://homes.cs.washington.edu/~jheer/" target="_blank">Professor Jeffrey Heer</a> for his insightful data visualization lectures and guidance throughout this project</h5></li>
+                <li><h5>Our awesome TAs <a href="http://kanitw.github.io/" target="_blank">Ham</a> and <a href="https://homes.cs.washington.edu/~jhoffs/" target="_blank">Jane</a> for their feedback and guidance throughout this project</h5></li>
+                <li><h5>Mike Bostock's many D3.js examples and inspiration on <a href="https://bl.ocks.org/mbostock"  target="_blank">bl.ocks.org</a></h5></li>
+                <li><h5><a href="https://d3js.org/" target="_blank">D3.js</a> developed by <a href="https://bost.ocks.org/mike/"  target="_blank">Mike Bostock</a></h5></li>
+                <li><h5>Mark Bryant, Executive Director of <a href="http://www.gunviolencearchive.org/" target="_blank">Gun Violence Archive</a>, for making available data on mass shootings in the United States</h5></li>
+              </ul>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <!--Second to Last Section-->
+      <div class="section about" data-anchor="about-us">
+        <div id="about-container" class="section-container">
+          <div id="about-intro" class="section-intro">
+            <h1>About Us</h1>
+            <h5> 
+              We are a team of four undergraduates from the University of Washington - Paul G. Allen School of Computer Science &amp; Engineering.
+            </h5>
+          </div>
+          <div id="about-wrapper" class="viz-wrapper">
+              <div>
+                <div class="circular circularZack"></div>
+                <p> Zack Chua </p>
+                <p>
+                  <a href="https://github.com/zzchua"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>   
+                  <a href="https://www.linkedin.com/in/zzchua/" target="_blank" class="emails"> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </p>
+              </div>
+              <div>
+                <div class="circular circularHiep"></div>
+                <p> Hiep Can </p>
+                <p>
+                  <a href="https://github.com/kurokuriboh" target="_blank" class="emails"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>   
+                  <a href="https://www.linkedin.com/in/hiepcan/" target="_blank" class="emails"> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </p>
+              </div>
+              <div>
+                <div class="circular circularKyaw"></div>
+                <p> Kyaw Thant </p>
+                <p>
+                  <a href="https://github.com/kyawt2196" target="_blank" class="emails"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>   
+                  <a href="https://www.linkedin.com/in/kyaw-thant-082b43a9/" target="_blank" class="emails"> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </p>
+              </div>
+              <div>
+                <div class="circular circularZiling"></div>
+                <p> Ziling Li </p>
+                <p>
+                  <a href="https://github.com/bluestann" target="_blank" class="emails"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>   
+                  <a href="https://www.linkedin.com/in/liziling/" target="_blank" class="emails"> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
