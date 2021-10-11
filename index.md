@@ -26,6 +26,8 @@ Syntax highlighted code block
 [Link](test.html) and ![Image](src)
 ```
 
+[Looking Down the Barrel](test.html)
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
