@@ -2,12 +2,10 @@
 
 <object data="11.12.21_Poverty_LAPOP1_10_heatmap.svg" type="image/svg+xml"></object>
 
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="https://static.observableusercontent.com/next/worker-24c44ac6.css">
-<script type="module" src="https://static.observableusercontent.com/next/worker-53fffea2.js"></script>
-<base target="_top">
-<body>
 
+<iframe width="100%" height="105" frameborder="0"
+  src="https://observablehq.com/embed/6de29ad7120b6cf4?cells=mergeData"></iframe>
+  
 You can use the [editor on GitHub](https://github.com/elishbeth/comp435Final/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
