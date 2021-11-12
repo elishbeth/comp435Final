@@ -3,8 +3,8 @@
 <object data="11.12.21_Poverty_LAPOP1_10_heatmap.svg" type="image/svg+xml"></object>
 
 
-<iframe width="100%" height="105" frameborder="0"
-  src="https://observablehq.com/embed/6de29ad7120b6cf4?cells=mergeData"></iframe>
+<iframe width="100%" height="926" frameborder="0"
+  src="https://observablehq.com/embed/6de29ad7120b6cf4?cells=interactiveBar"></iframe>
   
 You can use the [editor on GitHub](https://github.com/elishbeth/comp435Final/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
