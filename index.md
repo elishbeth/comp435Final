@@ -3,14 +3,14 @@
 <object data="11.12.21_Poverty_LAPOP1_10_heatmap.svg" type="image/svg+xml"></object>
 
 
-<div id="observablehq-interactiveBar-409a897e"></div>
+<div id="observablehq-interactiveBar-de25716f"></div>
 <p>Credit: <a href="https://observablehq.com/d/6de29ad7120b6cf4">Data Vis Final Project - Food Deserts by Elisabeth Landgren</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/6de29ad7120b6cf4@302.js?v=3";
+import define from "https://api.observablehq.com/d/6de29ad7120b6cf4.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "interactiveBar") return new Inspector(document.querySelector("#observablehq-interactiveBar-409a897e"));
+  if (name === "interactiveBar") return new Inspector(document.querySelector("#observablehq-interactiveBar-de25716f"));
 });
 </script>
   
