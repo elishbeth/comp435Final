@@ -1,17 +1,17 @@
-## What's For Dinner? 
+# What's For Dinner? 
 
-### Investigating Food Insecurity in Minnesota
+## Investigating Food Insecurity in Minnesota
 
-#### Elisabeth Landgren & Vaja Kldiashvili & Aidan Alls
+### Elisabeth Landgren & Vaja Kldiashvili & Aidan Alls
 
-How many people live more than 10 miles away from a grocery store in MN?
+## How many people live more than 10 miles away from a grocery store in MN?
 
-# Visualization here
+Visualization here
 
 
-Sunburst Diagram
+## Sunburst Diagram
 
-# Visualization here
+Visualization here
 
 Number of People Who live more than 10 miles from a grocery store in each of Minnesota's counties -- interactive with map to see demographics
 
@@ -22,8 +22,7 @@ Number of People Who live more than 10 miles from a grocery store in each of Min
 
 <object data="11.12.21_Poverty_LAPOP1_10_heatmap.svg" type="image/svg+xml"></object> -->
 
-# The rest is just notes on how to use Markdown, not part of our actual project
-  
+# The rest is just notes on how to use Markdown, not part of our actual project  
 
 ```markdown
 Syntax highlighted code block
@@ -42,8 +41,6 @@ Syntax highlighted code block
 
 [Link](test.html) and ![Image](src)
 ```
-
-[Looking Down the Barrel](test.html)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
