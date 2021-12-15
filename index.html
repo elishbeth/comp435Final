@@ -24,9 +24,19 @@
             <h1>Data and Description</h1>
         </div>
         <div class="section s4">
-            <h1>Pictogram </h1>   
-        </div>
+            <h1>Pictogram </h1>  
+            <div id="observablehq-pictogram-e087fcfb"></div>
+<p>Credit: <a href="https://observablehq.com/d/6de29ad7120b6cf4">Data Vis Final Project - Food Deserts by Elisabeth Landgren</a></p>
 
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/6de29ad7120b6cf4.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "pictogram") return new Inspector(document.querySelector("#observablehq-pictogram-e087fcfb"));
+});
+</script>
+ 
+        </div>
 
     </div>
 
