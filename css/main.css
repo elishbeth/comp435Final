@@ -23,9 +23,6 @@ p{
     background: url('../images/bowls.png');
     background-size: cover;
     
-    // h1{
-    //     font-family: 'Abril Fatface';
-    // }
 }
 
 .s2 {
@@ -38,7 +35,12 @@ p{
 .s3 {
 
     background: url('../images/MN.png');
-    background: color rgba(0, 0, 0, 0.884);;
+    background-size:cover;
+    
+}
+.s4 {
+
+    background: url('../images/grey.png');
     background-size:cover;
     
 }
