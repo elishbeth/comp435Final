@@ -49,6 +49,20 @@
                 });
                 </script>
         </div>
+
+        <div class="section s5">
+            <div id="observablehq-chart-9f5ead74"></div>
+
+            <script type="module">
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/6de29ad7120b6cf4@1814.js?v=3";
+            new Runtime().module(define, name => {
+            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9f5ead74"));
+            });
+            </script>
+            
+        </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
