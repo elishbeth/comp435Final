@@ -37,13 +37,20 @@ a {
 }
 
 .s2 {
-  background: url("../images/spoons.png");
+  background: url("../images/shopping.png");
   background-size: cover;
   padding-left: 80px;
   padding-right: 80px;
 }
 
 .s3 {
+  background: url("../images/spoons.png");
+  background-size: cover;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.s4 {
   background: url("../images/MN.png");
   background-size: cover;
   text-align: left;
@@ -51,26 +58,16 @@ a {
   padding-right: 80px;
 }
 
-.s4 {
+.s5 {
   background-color: #333333;
   background-size: cover;
   padding-left: 80px;
   padding-right: 80px;
-}
-
-.s5 {
-  background-color: #333333;
-  background-size: cover;
-}
-
-.s5 text {
-  fill: white;
 }
 
 .s6 {
   background-color: #333333;
-  padding-left: 80px;
-  padding-right: 80px;
+  background-size: cover;
 }
 
 .s6 text {
@@ -78,6 +75,16 @@ a {
 }
 
 .s7 {
+  background-color: #333333;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.s7 text {
+  fill: white;
+}
+
+.s8 {
   background-color: #333333;
   background-size: cover;
   padding-top: 80px;

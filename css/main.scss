@@ -40,13 +40,21 @@ a {
 .s2 {
     //Motivation
 
+    background: url('../images/shopping.png');
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 80px; 
+}
+.s3 {
+    //Background
+
     background: url('../images/spoons.png');
     background-size: cover;
     padding-left: 80px;
     padding-right: 80px; 
 }
 
-.s3 {
+.s4 {
     //Data and Description
 
     background: url('../images/MN.png');
@@ -56,7 +64,7 @@ a {
     padding-right: 80px;
     
 }
-.s4 {
+.s5 {
     //Pictogram
 
     background-color: #333333;
@@ -66,7 +74,7 @@ a {
     padding-right: 80px;
     
 }
-.s5 {
+.s6 {
     //sunburst
     background-color: #333333;
     background-size:cover;
@@ -75,7 +83,7 @@ a {
     }
     
 }
-.s6 {
+.s7 {
     //stacked bar
     background-color: #333333;
     text{
@@ -86,7 +94,7 @@ a {
     
 }
 
-.s7{
+.s8{
     // map
     background-color: #333333;
     background-size:cover;
