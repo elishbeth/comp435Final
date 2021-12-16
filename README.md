@@ -1,2 +1,7 @@
 # comp435Final
-# testing out github pages
+
+Elisabeth Landgren & Vaja Kldiashvili & Aidan Alls 
+
+https://elishbeth.github.io/comp435Final/
+
+:)
