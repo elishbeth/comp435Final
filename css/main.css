@@ -26,6 +26,11 @@ p {
   font-family: 'Helvetica';
 }
 
+a {
+  color: #69c3ff;
+  text-align: center;
+}
+
 .s1 {
   background: url("../images/bowls.png");
   background-size: cover;
@@ -41,6 +46,9 @@ p {
 .s3 {
   background: url("../images/MN.png");
   background-size: cover;
+  text-align: left;
+  padding-left: 600px;
+  padding-right: 80px;
 }
 
 .s4 {
