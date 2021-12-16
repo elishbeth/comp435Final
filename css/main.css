@@ -1,46 +1,64 @@
-h1{
-    text-align:center;
-    font-size: 50px;
-    color: white;
-    font-family: 'Garamond';
-    
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-family: 'Garamond';
 }
-h2{
-    text-align:center;
-    font-size: 30px;
-    color: white;
-    font-family: 'Garamond';
-}
-p{
-    text-align:center;
-    font-size: 20px;
-    color: white;
-    font-family: 'Helvetica';
-    
-}
-.s1 {
 
-    background: url('../images/bowls.png');
-    background-size: cover;
-    
+h2 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-family: 'Garamond';
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-family: 'Helvetica';
+}
+
+.s1 {
+  background: url("../images/bowls.png");
+  background-size: cover;
 }
 
 .s2 {
-
-    background: url('../images/spoons.png');
-    background-size: cover;
-    
+  background: url("../images/spoons.png");
+  background-size: cover;
 }
 
 .s3 {
-
-    background: url('../images/MN.png');
-    background-size:cover;
-    
+  background: url("../images/MN.png");
+  background-size: cover;
 }
+
 .s4 {
-
-    background: url('../images/grey.png');
-    background-size:cover;
-    
+  background: url("../images/grey.png");
+  background-size: cover;
 }
+
+.s4 div {
+  height: 200px;
+  width: 50%;
+}
+
+.s4 text {
+  fill: white;
+}
+
+.s5 {
+  background: url("../images/grey.png");
+  background-size: cover;
+}
+
+.s5 text {
+  fill: white;
+}
+
+.s6 {
+  background: url("../images/grey.png");
+  background-size: cover;
+}
+/*# sourceMappingURL=main.css.map */

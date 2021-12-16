@@ -51,15 +51,29 @@
         </div>
 
         <div class="section s5">
-            <div id="observablehq-chart-9f5ead74"></div>
+            <div id="observablehq-stackedChart-73d032c7"></div>
+
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/6de29ad7120b6cf4.js?v=3";
+                new Runtime().module(define, name => {
+                if (name === "stackedChart") return new Inspector(document.querySelector("#observablehq-stackedChart-73d032c7"));
+                });
+                </script>
+            
+        </div>
+
+        <div class="section s6">
+
+            <div id="observablehq-minnesotaCounties-8e333b1c"></div>
 
             <script type="module">
-            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/6de29ad7120b6cf4@1814.js?v=3";
-            new Runtime().module(define, name => {
-            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9f5ead74"));
-            });
-            </script>
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/6de29ad7120b6cf4@1858.js?v=3";
+                new Runtime().module(define, name => {
+                  if (name === "minnesotaCounties") return new Inspector(document.querySelector("#observablehq-minnesotaCounties-d81f2ee1"));
+                });
+                </script>
             
         </div>
 
