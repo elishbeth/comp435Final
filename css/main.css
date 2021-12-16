@@ -12,6 +12,13 @@ h2 {
   font-family: 'Garamond';
 }
 
+h3 {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-family: 'Garamond';
+}
+
 p {
   text-align: center;
   font-size: 20px;
@@ -27,6 +34,8 @@ p {
 .s2 {
   background: url("../images/spoons.png");
   background-size: cover;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .s3 {
@@ -35,16 +44,14 @@ p {
 }
 
 .s4 {
-  background: url("../images/grey.png");
+  background-color: #333333;
   background-size: cover;
-}
-
-.s4 text {
-  fill: white;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .s5 {
-  background: url("../images/grey.png");
+  background-color: #333333;
   background-size: cover;
 }
 
@@ -53,7 +60,19 @@ p {
 }
 
 .s6 {
-  background: url("../images/grey.png");
+  background-color: #333333;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.s6 text {
+  fill: white;
+}
+
+.s7 {
+  background-color: #333333;
   background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,30 +18,29 @@
         </div>
         <div class="section s2">
             <h1>Motivation</h1>
-            <p>Food deserts are locations in urban areas where there is low access to quality food. This can mean that grocery stores are far away, or that the stores that are close do not provide affordable fresh food. According to the US Department of Agriculture, there are “as many as 30 million adults and 12 million children living in a household where they may not always get enough to eat.” We want to investigate where local food deserts are and who lives in those areas, and if there are other factors that are related such as redlining, or interest rates.</p>
+            <p>Food deserts are locations in urban areas where there is low access to quality food. This can mean that grocery stores are far away, or that the stores that are close do not provide affordable fresh food. According to the US Department of Agriculture, there are “as many as 30 million adults and 12 million children living in a household where they may not always get enough to eat.” We want to investigate where local food deserts are and who lives in those areas.</p>
         </div>
         <div class="section s3">
             <h1>Data and Description</h1>
         </div>
         <div class="section s4">
-            <h1>Pictogram </h1>  
-            <div id="observablehq-pictogram-e087fcfb"></div>
+            <div id="observablehq-pictogram-d17eb524"></div>
 
                 <script type="module">
                 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-                import define from "https://api.observablehq.com/d/6de29ad7120b6cf4.js?v=3";
+                import define from "https://api.observablehq.com/d/86586e92f5ba8475.js?v=3";
                 new Runtime().module(define, name => {
-                if (name === "pictogram") return new Inspector(document.querySelector("#observablehq-pictogram-e087fcfb"));
+                if (name === "pictogram") return new Inspector(document.querySelector("#observablehq-pictogram-d17eb524"));
                 });
                 </script>
+                <h1>That is 2.5 Million People</h1>
  
         </div>
 
-        <div class="section s4">
+        <div class="section s5">
 
-        <div class="container">
+            <h2>Explore who lives more than 10 miles from a grocery store by clicking on each county</h2>
             <div id="observablehq-chart-dfd70b23"></div>
-        </div>
 
                 <script type="module">
                 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -52,7 +51,8 @@
                 </script>
         </div>
 
-        <div class="section s5">
+        <div class="section s6">
+            <h2>Take a look at the demographics of people who live more than 1 mile away from a grocery store</h2>
             <div id="observablehq-stackedChart-73d032c7"></div>
 
                 <script type="module">
@@ -65,11 +65,17 @@
             
         </div>
 
-        <div class="section s6">
+        <div class="section s7">
 
-            <iframe width="100%" height="734" frameborder="0"
-            src="https://observablehq.com/embed/6de29ad7120b6cf4?cells=minnesotaCounties"></iframe>
-            
+            <div id="observablehq-minnesotaCounties-674ac822"></div>
+
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/6de29ad7120b6cf4@1878.js?v=3";
+                new Runtime().module(define, name => {
+                if (name === "minnesotaCounties") return new Inspector(document.querySelector("#observablehq-minnesotaCounties-674ac822"));
+                });
+                </script>         
         </div>
 
     </div>
